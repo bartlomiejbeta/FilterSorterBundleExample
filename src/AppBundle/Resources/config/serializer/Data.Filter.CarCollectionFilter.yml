@@ -1,0 +1,28 @@
+Docplanner\ApiBundle\Data\Filter\CarCollectionFilter:
+     exclusion_policy: ALL
+     properties:
+            brand:
+                accessor:
+                    setter: setBrand
+                    getter: getBrand
+                type: string
+            model:
+                accessor:
+                    setter: setModel
+                    getter: getModel
+                type: string
+            engineCapacity:
+                accessor:
+                    setter: setEngineCapacity
+                    getter: getEngineCapacity
+                type: integer
+            fuelType:
+                accessor:
+                    setter: setFuelType
+                    getter: getFuelType
+                type: string
+            gearboxType:
+                accessor:
+                    setter: setGearboxType
+                    getter: getGearboxType
+                type: string

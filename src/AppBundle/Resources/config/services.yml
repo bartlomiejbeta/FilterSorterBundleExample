@@ -1,0 +1,11 @@
+services:
+    filter.query.adapter.car_collection:
+        class: AppBundle\Service\Filter\Adapter\FilterCarAdapter
+        public: false
+        tags:
+            - { name: 'filter.query.adapter' }
+
+    repository.car:
+        class: AppBundle\Repository\CarRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
+        arguments: ['AppBundle\Entity\Car']
