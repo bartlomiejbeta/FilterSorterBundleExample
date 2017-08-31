@@ -12,25 +12,57 @@ declare(strict_types=1);
 
 namespace AppBundle\Data\Filter;
 
-
-
+use JMS\Serializer\Annotation as Serializer;
 use BartB\FilterSorterBundle\Data\Filter\FilterInterface;
 
+/**
+ * @Serializer\ExclusionPolicy("all")
+ */
 class CarCollectionFilter implements FilterInterface
 {
-	/** @var string */
+	/**
+	 * @var string
+	 *
+	 * @Serializer\Type("string")
+	 * @Serializer\Accessor(getter="getBrand", setter="setBrand")
+	 * @Serializer\Expose()
+	 */
 	private $brand;
 
-	/** @var string */
+	/**
+	 * @var string
+	 *
+	 * @Serializer\Type("string")
+	 * @Serializer\Accessor(getter="getModel", setter="setModel")
+	 * @Serializer\Expose()
+	 */
 	private $model;
 
-	/** @var int */
+	/**
+	 * @var int
+	 *
+	 * @Serializer\Type("integer")
+	 * @Serializer\Accessor(getter="getEngineCapacity", setter="setEngineCapacity")
+	 * @Serializer\Expose()
+	 */
 	private $engineCapacity;
 
-	/** @var string */
+	/**
+	 * @var string
+	 *
+	 * @Serializer\Type("string")
+	 * @Serializer\Accessor(getter="getFuelType", setter="setFuelType")
+	 * @Serializer\Expose()
+	 */
 	private $fuelType;
 
-	/** @var string */
+	/**
+	 * @var string
+	 *
+	 * @Serializer\Type("string")
+	 * @Serializer\Accessor(getter="getGearboxType", setter="setGearboxType")
+	 * @Serializer\Expose()
+	 */
 	private $gearboxType;
 
 	/**
