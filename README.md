@@ -1,4 +1,4 @@
-FilterSorterBundleExample2
+FilterSorterBundleExample
 ==========================
 
-A Symfony project created on August 31, 2017, 9:15 am.
+Example for the [FilterSorterBundle](https://github.com/bartlomiejbeta/FilterSorterBundle)
